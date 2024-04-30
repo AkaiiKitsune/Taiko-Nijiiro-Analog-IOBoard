@@ -5,14 +5,27 @@ It emulates an analog joystick to enable force sensing, just like how you would 
 
 ![Taiko Drum Controller](Images/banner-taiko.png)
 
+## Table of content
+
+- [Analog Taiko IO Board - ESP32 S3 DevkitC1](#analog-taiko-io-board---esp32-s3-devkitc1)
+  - [Table of content](#table-of-content)
+  - [About this Project](#about-this-project)
+  - [Components needed](#components-needed)
+  - [Parameters tuning](#parameters-tuning)
+    - [Player Selection](#player-selection)
+    - [Sensitivity](#sensitivity)
+  - [Additional Notes](#additional-notes)
+    - [Why bridge rectifiers](#why-bridge-rectifiers)
+    - [TaikoArcadeLoader](#taikoarcadeloader)
+
 ## About this Project
 
-This is a hard fork of [ShikyC's](https://github.com/ShikyC/Taiko-Drum-Controller-Arduino) taiko controller project with some QOL improvements.
+This is a hard fork of [ShikyC's](https://github.com/ShikyC/Taiko-Drum-Controller-Arduino) taiko controller project with some QOL improvements.  
 It's aim is to provide accurate-enough arcade drum support for converted SD cabs or bootlegs running Taiko Nijiiro.
 ![Converted bootleg cab](Images/bootleg_cab.png)
 **This program is for personal and non-commercial use only.**
 
-## What You Need
+## Components needed
 
 * An [ESP32 S3 DevKitC-1](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html) board.
 * 4 [JST PH 2.0](https://fr.aliexpress.com/item/1005004067623293.html) connectors (i'm using 90° ones but straight ones work too).
@@ -26,17 +39,17 @@ All of those parts can be found for next to nothing on aliexpress.
 You'll also need an IO Board PCB (you can find the gerber files in [here](PCB/Export/)).
 I've used [JLCPCB](https://jlcpcb.com/) to order mine.
 
-## Tuning the Parameters
+## Parameters tuning
 
 All the parameters are located in [params.h](Firmware/params.h).
 
-### Player Select
+### Player Selection
 
    By setting `#define PLAYER_SELECT` to either `1` or `2`, you can set what player the board will act as. If you're using two of these, make sure that they each are set to a different player to avoid issues.
 
    The buildin led of the ESP32 S3 DevKitC1 will be either red or blue depending on that value !
 
-### Sensitivities
+### Sensitivity
 
    Not all piezoelectric sensors are the same, and thus the captured signals from the 4 sensors may vary significantly. The sensitivity adjust trims are used to normalize those differences.  
 
@@ -52,7 +65,7 @@ All the parameters are located in [params.h](Firmware/params.h).
 
 ## Additional Notes
 
-### Why using bridge rectifiers
+### Why bridge rectifiers
 
    Without biasing the voltage of the piezoelectric sensors, their output voltage range is about -5V to +5V. However, the ESP32 ADCs only accept positive voltage values from 0 to 3.3V. When they receive a negative voltage, it's simply truncated to 0.
 
