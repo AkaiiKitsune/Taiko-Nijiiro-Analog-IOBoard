@@ -1,0 +1,23 @@
+G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,8.0.1*
+G04 #@! TF.CreationDate,2024-04-30T12:08:52+02:00*
+G04 #@! TF.ProjectId,Taiko IoBoard,5461696b-6f20-4496-9f42-6f6172642e6b,1*
+G04 #@! TF.SameCoordinates,Original*
+G04 #@! TF.FileFunction,Profile,NP*
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 8.0.1) date 2024-04-30 12:08:52*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+G04 #@! TA.AperFunction,Profile*
+%ADD10C,0.050000*%
+G04 #@! TD*
+G04 APERTURE END LIST*
+D10*
+X68349999Y-25049509D02*
+X133850000Y-25049509D01*
+X133850000Y-97807983D01*
+X68349999Y-97807983D01*
+X68349999Y-25049509D01*
+M02*
