@@ -3,13 +3,13 @@
 Open-source project to make your own Taiko no Tatsujin IO Board for PC use or SD cabs converted to Nijiiro.  
 It emulates an analog joystick to enable force sensing, just like how you would play on an official arcade machine.
 
-![Taiko Drum Controller](./Images/banner-taiko.png)
+![Taiko Drum Controller](Images/banner-taiko.png)
 
 ## About this Project
 
 This is a hard fork of [ShikyC's](https://github.com/ShikyC/Taiko-Drum-Controller-Arduino) taiko controller project with some QOL improvements.
 It's aim is to provide accurate-enough arcade drum support for converted SD cabs or bootlegs running Taiko Nijiiro.
-![Converted bootleg cab](./Images/bootleg_cab.png)
+![Converted bootleg cab](Images/bootleg_cab.png)
 **This program is for personal and non-commercial use only.**
 
 ## What You Need
@@ -23,12 +23,12 @@ It's aim is to provide accurate-enough arcade drum support for converted SD cabs
 
 All of those parts can be found for next to nothing on aliexpress.
 
-You'll also need an IO Board PCB (you can find the gerber files in [here](./PCB/Export/)).
+You'll also need an IO Board PCB (you can find the gerber files in [here](PCB/Export/)).
 I've used [JLCPCB](https://jlcpcb.com/) to order mine.
 
 ## Tuning the Parameters
 
-All the parameters are located in [params.h](./Firmware/params.h).
+All the parameters are located in [params.h](Firmware/params.h).
 
 ### Player Select
 
@@ -44,11 +44,11 @@ All the parameters are located in [params.h](./Firmware/params.h).
 
    In the following example, the right-don area generates a much higher value than other 3, so you can adjust the `sensitivity` by turning the R_DON potentiometer to eliminate the issue.
 
-   ![Setting sensitivity values](./Images/tune_sensitivities.png)
+   ![Setting sensitivity values](Images/tune_sensitivities.png)
 
    Note that the installation of the sensors is critical. You should make sure that the sensors are firmly attached on the wood and located properly, as seen on the picture below.
 
-   ![Piezo locations](./Images/piezo_locations.png)
+   ![Piezo locations](Images/piezo_locations.png)
 
 ## Additional Notes
 
@@ -60,7 +60,7 @@ All the parameters are located in [params.h](./Firmware/params.h).
 
    Using a bridge rectifier, all negative values are converted to positive. In other words, it's acting like a mathematical `abs()` function, ensuring that we don't miss any negative voltages.
 
-   ![Why using bridge rectifiers](./Images/bridge_signal.png)
+   ![Why using bridge rectifiers](Images/bridge_signal.png)
 
 ### TaikoArcadeLoader
 
