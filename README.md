@@ -1,5 +1,8 @@
 # Analog Taiko IO Board - ESP32 S3 DevkitC1
 
+**PLEASE NOTE THAT THIS DESIGN IS FLAWED AND NEEDS TO BE REDONE!**  
+While it will work, this has massive noise issues and is currently not ready for use.
+
 Open-source project to make your own Taiko no Tatsujin IO Board for PC use or SD cabs converted to Nijiiro.  
 It emulates an analog joystick to enable force sensing, just like how you would play on an official arcade machine.
 
